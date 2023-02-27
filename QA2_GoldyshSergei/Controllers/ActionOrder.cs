@@ -16,8 +16,8 @@ namespace QA2_GoldyshSergei.Controllers
                 DateTime dateAdd = DateTime.Now;
                 orders.OrderDate = dateAdd;
                 Console.WriteLine("Введите Id клиента");
-                int clientID = 0;
-                while (!int.TryParse(Console.ReadLine(), out clientID))
+                uint clientID = 0;
+                while (!uint.TryParse(Console.ReadLine(), out clientID))
                 {
                     Console.WriteLine("Введите Id клиента цифрами");
                 }
@@ -123,8 +123,8 @@ namespace QA2_GoldyshSergei.Controllers
                     DateTime dateAdd = DateTime.Now;
                     orders.OrderDate = dateAdd;
                     Console.WriteLine("Введите Id клиента которому добавите этот заказ");
-                    int clientID = 0;
-                    while (!int.TryParse(Console.ReadLine(), out clientID))
+                    uint clientID = 0;
+                    while (!uint.TryParse(Console.ReadLine(), out clientID))
                     {
                         Console.WriteLine("Введите Id клиента которому добавите этот заказ ЦИФРАМИ");
                     }

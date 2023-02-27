@@ -22,13 +22,13 @@ namespace QA2_GoldyshSergei.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("QA2_GoldyshSergei.Client", b =>
+            modelBuilder.Entity("QA2_GoldyshSergei.Model.Client", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("DateAdd")
                         .HasColumnType("datetime2");
@@ -37,8 +37,8 @@ namespace QA2_GoldyshSergei.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OrderAmount")
-                        .HasColumnType("int");
+                    b.Property<long>("OrderAmount")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("PhoneNum")
                         .IsRequired()
@@ -53,16 +53,16 @@ namespace QA2_GoldyshSergei.Migrations
                     b.ToTable("Clients");
                 });
 
-            modelBuilder.Entity("QA2_GoldyshSergei.Order", b =>
+            modelBuilder.Entity("QA2_GoldyshSergei.Model.Order", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<int>("ClientId")
-                        .HasColumnType("int");
+                    b.Property<long>("ClientId")
+                        .HasColumnType("bigint");
 
                     b.Property<DateTime?>("CloseDate")
                         .HasColumnType("datetime2");
@@ -84,9 +84,9 @@ namespace QA2_GoldyshSergei.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("QA2_GoldyshSergei.Order", b =>
+            modelBuilder.Entity("QA2_GoldyshSergei.Model.Order", b =>
                 {
-                    b.HasOne("QA2_GoldyshSergei.Client", "Clients")
+                    b.HasOne("QA2_GoldyshSergei.Model.Client", "Clients")
                         .WithMany("orders")
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -95,7 +95,7 @@ namespace QA2_GoldyshSergei.Migrations
                     b.Navigation("Clients");
                 });
 
-            modelBuilder.Entity("QA2_GoldyshSergei.Client", b =>
+            modelBuilder.Entity("QA2_GoldyshSergei.Model.Client", b =>
                 {
                     b.Navigation("orders");
                 });

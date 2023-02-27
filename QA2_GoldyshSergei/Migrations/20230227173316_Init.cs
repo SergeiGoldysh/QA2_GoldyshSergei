@@ -15,12 +15,12 @@ namespace QA2_GoldyshSergei.Migrations
                 name: "Clients",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SecondName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNum = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    OrderAmount = table.Column<int>(type: "int", nullable: false),
+                    OrderAmount = table.Column<long>(type: "bigint", nullable: false),
                     DateAdd = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -32,13 +32,13 @@ namespace QA2_GoldyshSergei.Migrations
                 name: "Orders",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     OrderDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     OrderPrice = table.Column<float>(type: "real", nullable: false),
                     CloseDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ClientId = table.Column<int>(type: "int", nullable: false)
+                    ClientId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {

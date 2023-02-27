@@ -10,11 +10,11 @@ namespace QA2_GoldyshSergei.Model
     public class Client
     {
         [Key]
-        public int Id { get; set; }
+        public uint Id { get; set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string PhoneNum { get; set; }
-        public int OrderAmount { get; set; }
+        public uint OrderAmount { get; set; }
         public DateTime DateAdd { get; set; }
         public List<Order> orders { get; set; } = new();
 
