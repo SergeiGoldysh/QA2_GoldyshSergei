@@ -36,12 +36,6 @@ namespace QA2_GoldyshSergei.Controllers
             {
                 Console.WriteLine("поле телефон не может быть пустым или состоять из букв");
             }
-            //string phoneNum = Console.ReadLine();
-            //while (string.IsNullOrEmpty(phoneNum) && phoneNum.Trim().Length == 0)
-            //{
-            //    Console.WriteLine("поле телефон не может быть пустым или состоять из букв");
-            //    phoneNum = Console.ReadLine();
-            //}
 
             client.PhoneNum = enternumber.ToString();
             uint orderAmount = 0;
