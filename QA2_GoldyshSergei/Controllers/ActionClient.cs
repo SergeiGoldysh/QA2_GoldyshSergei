@@ -31,14 +31,14 @@ namespace QA2_GoldyshSergei.Controllers
             }
             client.SecondName = secondName;
             Console.WriteLine("Введите ваш номер телефона");
-            uint enterNumberPhon = 0;
-            while (!uint.TryParse(Console.ReadLine(), out enterNumberPhon))
+            uint enterNumberPhonn = 0;
+            while (!uint.TryParse(Console.ReadLine(), out enterNumberPhonn))
             {
                 Console.WriteLine("поле телефон не может быть пустым или состоять из букв");
             }
             
 
-            client.PhoneNum = enterNumberPhon.ToString();
+            client.PhoneNum = enterNumberPhonn.ToString();
             uint orderAmount = 0;
             client.OrderAmount = orderAmount;
             DateTime dateAdd = DateTime.Now;
