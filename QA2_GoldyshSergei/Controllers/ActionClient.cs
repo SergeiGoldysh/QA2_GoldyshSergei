@@ -31,8 +31,8 @@ namespace QA2_GoldyshSergei.Controllers
             }
             client.SecondName = secondName;
             Console.WriteLine("Введите ваш номер телефона");
-            int enterNumberPhon = 0;
-            while (!int.TryParse(Console.ReadLine(), out enterNumberPhon))
+            uint enterNumberPhon = 0;
+            while (!uint.TryParse(Console.ReadLine(), out enterNumberPhon))
             {
                 Console.WriteLine("поле телефон не может быть пустым или состоять из букв");
             }
