@@ -31,8 +31,8 @@ namespace QA2_GoldyshSergei.Controllers
             }
             client.SecondName = secondName;
             Console.WriteLine("Введите ваш номер телефона");
-            uint enterNumberPhonn = 0;
-            while (!uint.TryParse(Console.ReadLine(), out enterNumberPhonn))
+            ulong enterNumberPhonn = 0;
+            while (!ulong.TryParse(Console.ReadLine(), out enterNumberPhonn))
             {
                 Console.WriteLine("поле телефон не может быть пустым или состоять из букв");
             }
@@ -145,8 +145,8 @@ namespace QA2_GoldyshSergei.Controllers
                     }
                     client.SecondName = secondName;
                     Console.WriteLine("Введите новый номер телефона");
-                    int enterNumberPhon = 0;
-                    while (!int.TryParse(Console.ReadLine(), out enterNumberPhon))
+                    ulong enterNumberPhon = 0;
+                    while (!ulong.TryParse(Console.ReadLine(), out enterNumberPhon))
                     {
                         Console.WriteLine("поле телефон не может быть пустым или состоять из букв");
                     }
